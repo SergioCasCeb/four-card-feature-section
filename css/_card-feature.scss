@@ -1,0 +1,116 @@
+.card-feature {
+    padding: var(--sp-xxlg) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        font-size: var(--fs-xlg);
+        font-weight: var(--fw-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--sp-m);
+        text-align: center;
+        color: var(--clr-neutral-500);
+
+        span {
+            font-weight: var(--fw-semibold);
+            color: var(--clr-neutral-900);
+        }
+    }
+
+    &__description {
+        color: var(--clr-neutral-500);
+        margin-bottom: var(--sp-xxlg);
+        max-width: 55ch;
+        text-align: center;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "supervisor"
+            "team-builder"
+            "karma"
+            "calculator";
+        gap: var(--sp-lg);
+
+        .card {
+            border-top: 5px solid var(--_card-color);
+            padding: var(--sp-lg);
+            border-radius: 5px;
+            box-shadow: 0 8px 10px var(--clr-shadow);
+            transform: scale(1);
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                box-shadow: 0 8px 30px var(--clr-shadow);
+                transform: scale(1.05);
+            }
+
+            &__title {
+                font-size: var(--fs-lg);
+                font-weight: var(--fw-semibold);
+                margin-bottom: var(--sp-xsm);
+            }
+
+            &__description {
+                color: var(--clr-neutral-500);
+                font-size: var(--fs-sm);
+                margin-bottom: var(--sp-xlg);
+            }
+
+            &__illustration {
+                text-align: right;
+
+                img {
+                    max-width: 3rem;
+                }
+            }
+        }
+
+        .supervision {
+            --_card-color: var(--clr-primary-cyan-500);
+            grid-area: supervisor;
+        }
+
+        .team-builder {
+            --_card-color: var(--clr-primary-red-500);
+            grid-area: team-builder;
+        }
+
+        .karma {
+            --_card-color: var(--clr-primary-orange-500);
+            grid-area: karma;
+        }
+
+        .calculator {
+            --_card-color: var(--clr-primary-blue-500);
+            grid-area: calculator;
+        }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .card-feature {
+
+        &__cards {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                ". team-builder ."
+                "supervisor team-builder calculator"
+                "supervisor karma calculator"
+                ". karma .";
+
+            .card {
+                max-width: 20rem;
+            }
+        }
+    }
+}
