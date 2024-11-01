@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/responsive-four-card-feature-with-scss-and-css-grid-glbSVXKDcj)
 - Live Site URL: [Netlify](https://your-live-site-url.com)
 
 ## My process
