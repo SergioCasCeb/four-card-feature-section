@@ -14,11 +14,9 @@
         justify-content: center;
         margin-bottom: var(--sp-m);
         text-align: center;
-        color: var(--clr-neutral-500);
 
         span {
             font-weight: var(--fw-semibold);
-            color: var(--clr-neutral-900);
         }
     }
 
@@ -56,7 +54,7 @@
             &__title {
                 font-size: var(--fs-lg);
                 font-weight: var(--fw-semibold);
-                margin-bottom: var(--sp-xsm);
+                margin-bottom: var(--sp-sm);
             }
 
             &__description {
@@ -69,7 +67,7 @@
                 text-align: right;
 
                 img {
-                    max-width: 3rem;
+                    max-width: 4rem;
                 }
             }
         }
