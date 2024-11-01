@@ -45,6 +45,7 @@
             box-shadow: 0 8px 10px var(--clr-shadow);
             transform: scale(1);
             transition: all 250ms ease-in-out;
+            background-color: var(--clr-neutral-50);
 
             &:hover {
                 box-shadow: 0 8px 30px var(--clr-shadow);
